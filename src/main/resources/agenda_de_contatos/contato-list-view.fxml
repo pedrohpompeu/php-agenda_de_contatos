@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="520.0" prefWidth="740.0" spacing="20.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agenda_de_contatos.controller.ContatoListController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Contatos" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="Symbol" size="20.0" />
+        </font>
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </Label>
+    <TableView fx:id="tableView" style="-fx-background-color: #989898;" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNome" prefWidth="170.0" style="-fx-background-color: #767676;" text="Nome" />
+            <TableColumn fx:id="colTelefone" prefWidth="170.0" style="-fx-background-color: #767676;" text="Telefone" />
+            <TableColumn fx:id="colEmail" prefWidth="220.0" style="-fx-background-color: #767676;" text="Email" />
+            <TableColumn fx:id="colAcoes" minWidth="78.00003051757812" prefWidth="140.0" style="-fx-background-color: #767676;" text="Ações" />
+        </columns>
+    </TableView>
+    <Button mnemonicParsing="false" onAction="#handleAdicionarContato" style="-fx-background-color: #989898;" text=" + Novo Contato">
+      <font>
+         <Font name="Symbol" size="14.0" />
+      </font></Button>
+
+    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-border-color: lightgray; -fx-border-width: 1 0 0 0; -fx-padding: 5;">
+        <Label fx:id="statusLabel" text="Status: Verificando..." textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <HBox HBox.hgrow="ALWAYS" />
+        <Button fx:id="syncButton" mnemonicParsing="false" onAction="#handleSincronizar" style="-fx-background-color: #989898;" text="Sincronizar">
+         <font>
+            <Font name="Symbol" size="12.0" />
+         </font></Button>
+    </HBox>
+</VBox>

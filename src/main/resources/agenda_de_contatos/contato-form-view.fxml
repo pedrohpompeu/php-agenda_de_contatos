@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefWidth="450.0" spacing="20.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agenda_de_contatos.controller.ContatoFormController">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+        <Label fx:id="titleLabel" text="Adicionar Contato" textFill="WHITE">
+            <font>
+                <Font name="Symbol" size="18.0" />
+            </font>
+        </Label>
+        <GridPane hgap="10.0" vgap="15.0">
+            <padding>
+                <Insets right="10.0" />
+            </padding>
+            <TextField fx:id="telefoneField" prefHeight="107.0" prefWidth="260.0" style="-fx-background-color: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Nome:" textFill="WHITE" GridPane.rowIndex="0">
+                <font>
+                    <Font name="Symbol" size="14.0" />
+                </font>
+            </Label>
+            <TextField fx:id="nomeField" prefHeight="29.0" prefWidth="260.0" style="-fx-background-color: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Email:" textFill="WHITE" GridPane.rowIndex="1">
+                <font>
+                    <Font name="Symbol" size="14.0" />
+                </font>
+            </Label>
+            <TextField fx:id="emailField" prefHeight="30.0" prefWidth="260.0" promptText="*Opcional" style="-fx-background-color: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="4.0" prefWidth="130.0" text="Data de Nascimento:" textFill="WHITE" GridPane.rowIndex="2">
+                <font>
+                    <Font name="Symbol" size="14.0" />
+                </font>
+            </Label>
+            <DatePicker fx:id="dataNascimentoPicker" prefHeight="30.0" prefWidth="260.0" promptText="*Opcional" style="-fx-background-color: #989898; -fx-skin: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Telefone:" textFill="WHITE" GridPane.rowIndex="3">
+                <font>
+                    <Font name="Symbol" size="14.0" />
+                </font>
+            </Label>
+            <columnConstraints>
+                <ColumnConstraints maxWidth="144.0" minWidth="126.0" prefWidth="132.0" />
+                <ColumnConstraints maxWidth="264.0" minWidth="246.0" prefWidth="258.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="38.666668574015304" minHeight="0.0" prefHeight="23.999998092651367" />
+                <RowConstraints maxHeight="33.33333524068197" minHeight="0.0" prefHeight="24.000000000000007" />
+                <RowConstraints maxHeight="54.66667429606119" minHeight="0.0" prefHeight="25.0" />
+                <RowConstraints maxHeight="32.66666666666666" minHeight="0.0" prefHeight="26.0" />
+            </rowConstraints>
+        </GridPane>
+        <Button alignment="CENTER" onAction="#handleSalvar" style="-fx-background-color: #989898;" text="Salvar" textAlignment="JUSTIFY">
+            <font>
+                <Font name="Symbol" size="14.0" />
+            </font></Button>
+    </VBox>
