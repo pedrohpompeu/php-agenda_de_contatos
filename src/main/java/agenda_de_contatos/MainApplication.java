@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class MainApplication extends Application {
     @Override
@@ -13,7 +14,7 @@ public class MainApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 940, 460);
 
-        scene.getStylesheets().add(MainApplication.class.getResource("purple-theme.css").toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(MainApplication.class.getResource("cyber-night-theme.css")).toExternalForm());
 
         stage.setTitle("Agenda de Contatos php");
         stage.setScene(scene);
